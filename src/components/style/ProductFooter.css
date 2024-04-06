@@ -1,0 +1,56 @@
+/* ProductFooter.css */
+.footer-container {
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around; /* Adjusts the spacing of the footer items */
+  align-items: center;
+  position: static; /* Makes the footer static */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-item-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.footer-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.small-text {
+  margin-top: 10px;
+}
+
+.footer-email {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-item {
+    margin: 10px 0;
+  }
+  .footer-item-icon {
+    margin: 10px 0;
+  }
+}
