@@ -20,12 +20,6 @@ const Header = ({ onSearch, onCategorySelect }) => {
     getCategories().then(setCategories);
   }, []);
 
-  useEffect(() => {
-    if (searchTerm) {
-      debouncedSearch(searchTerm);
-    }
-  }, [searchTerm, debouncedSearch]);
-
   const handleSearchIconClick = () => {
     setSearchActive((prev) => !prev);
   };
@@ -36,6 +30,7 @@ const Header = ({ onSearch, onCategorySelect }) => {
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
+    debouncedSearch(e.target.value);
   };
 
   const handleKeyDown = (e) => {

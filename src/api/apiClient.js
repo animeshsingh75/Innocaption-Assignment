@@ -12,7 +12,7 @@ export const login = (username, password) => {
   }).then((res) => res.json());
 };
 export const fetchProducts = () => {
-  return fetch(`${BASE_URL}/products`).then((res) => res.json());
+  return fetch(`${BASE_URL}/products?limit=0`).then((res) => res.json());
 };
 
 export const updateCart = (userId, productId, quantity) => {
@@ -32,14 +32,14 @@ export const updateCartQuantity = (userId, productId, quantity) => {
 };
 
 export const searchProductsByName = (searchTerm) => {
-  return fetch(`${BASE_URL}/products/search?q=${searchTerm}`).then((res) =>
-    res.json()
+  return fetch(`${BASE_URL}/products/search?q=${searchTerm}&limit=0`).then(
+    (res) => res.json()
   );
 };
 
 export const searchProductsByCategory = (searchTerm) => {
-  return fetch(`${BASE_URL}/products/category/${searchTerm}`).then((res) =>
-    res.json()
+  return fetch(`${BASE_URL}/products/category/${searchTerm}&limit=0`).then(
+    (res) => res.json()
   );
 };
 
