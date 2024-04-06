@@ -38,8 +38,8 @@ export const searchProductsByName = (searchTerm) => {
 };
 
 export const searchProductsByCategory = (searchTerm) => {
-  return fetch(`${BASE_URL}/products/category/${searchTerm}&limit=0`).then(
-    (res) => res.json()
+  return fetch(`${BASE_URL}/products/category/${searchTerm}`).then((res) =>
+    res.json()
   );
 };
 
